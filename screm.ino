@@ -101,9 +101,9 @@ void loop() {
   Serial.println();
   delay(100);
 
-  if(angle_abv_hrzn < -50 || angle_abv_hrzn > 250){
+  if((angle_abv_hrzn < -50 || angle_abv_hrzn > 250) && alarm_pwm > 1450){
     ledstate = 1;
-  }else if(alarm_pwm > 1500){
+  }else if(alarm_pwm > 1900){
     ledstate = 1;
   }else{
     ledstate = 0;
